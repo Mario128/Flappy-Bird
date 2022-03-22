@@ -1,6 +1,6 @@
 #game {
     width: 400px;
-    height: 600px;
+    height: 500px;
     border: solid black 2px;
     margin: auto;
     /*background-image: url("/media/flappyback.jpg");
@@ -10,13 +10,12 @@
 }
 
 #obstacle {
-    height: 600px;
+    height: 500px;
     width: 50px;
     background-color: green;
     border: 2px solid black;
     position: relative;
-    left: 375px;
-
+    left: 400px;
 }
 .animation {
     animation: obstacle 3s infinite linear;
@@ -29,18 +28,18 @@
 
 #hole {
     height: 150px;
-    width: 55px;
+    width: 54px;
     background-color: #3cb6b6;
     position: relative;
-    left: 375px;
-    top: -600px;
+    left: 400px;
+    top: -500px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
 
 #character{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-image: url(media/flappybirdnew.png);
     background-size: cover;
     border-radius: 50%;

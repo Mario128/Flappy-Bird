@@ -7,9 +7,15 @@ var index = 0;
 
 
 hole.addEventListener("animationiteration", () => {
+
+    var rnd = Math.random()*3;
+    var top =(rnd*100) + 150;
+    hole.style.top=-(top) + "px";
+    score ++;
+/*
     let random = Math.random()*(-450) -150;
     hole.style.top = random + "px"
-    score ++;
+    score ++;*/
 
 });
 
@@ -18,17 +24,17 @@ var gravity = setInterval(function gravy(){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
     let holeTop = parseInt(window.getComputedStyle(hole).getPropertyValue("top"));
-    let cTop = -(600-characterTop);
+    let cTop = -(500-characterTop);
 
     if(index == 0) {
         if(jumping == false) {
             character.style.top = (characterTop + 3) + "px";
         }
-        if((characterTop > 585)||((obstacleLeft<20)&&(obstacleLeft>-50)&&((cTop<holeTop)||(cTop>holeTop+130)))){
+        if((characterTop > 485)||((obstacleLeft<20)&&(obstacleLeft>-50)&&((cTop<holeTop+15)||(cTop>holeTop+140)))){
 
             obstacle.style.animationPlayState = "paused"
             hole.style.animationPlayState = "paused"
-            alert("Gameover" + score);
+            alert("GAMEOVER || SCORE: " + score);
             score = 0;
             index = 1;
             /* setTimeout(gravy, 1000000);
